@@ -61,7 +61,7 @@ The zip file returns as a subfolder within the CSVs:
 7. Writing Data Transformations mount ADLS Gen2 to Databricks.
    - Within the code using python with OS library, removed files that were not used. (code is provided in the reference below)
    - Create a dataframe and soem data transforming in a few columns.
-<img src="Images/6_databricks_notebook.png">
+<img src="Images/6_databricks_notebok.png">
 
 8. Writing Transformed Data to ADLS Gen2.
 
