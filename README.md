@@ -1,4 +1,4 @@
-# end-to-end-project-elections-brazil-2022
+# Brazilian Elections Candidates in 2022 | Azure End-To-End Data Engineering Project
 
 This project provides a data engineering journey on the Brazilian election of 2022 dataset. Starting with a zip file from Superior Electoral Court (Brazilian Electoral Justice) , the data is ingested into the Azure ecosystem via Azure Data Factory. It's initially stored in Azure Data Lake Storage Gen2, then transformed in Azure Databricks. The enriched data, once again housed in ADLS Gen2, undergoes advanced analytics in Azure Synapse. 
 
