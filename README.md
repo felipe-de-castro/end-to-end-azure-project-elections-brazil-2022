@@ -21,7 +21,7 @@ Source(TSE): [Federal and States Candidates in 2022 elections](https://dadosaber
 2. Create a Resource Group 'data-election-brazil' to house and manage all the Azure resources associated with this project. 
 3. Within the created resource group, setup a storage account. This is specifically configured to leverage Azure Data Lake Storage(ADLS) Gen2 capabilities.
 4. Create a Container inside this storage account to hold the project's data. Two directories 'raw-data' and 'transfromed-data' are created to store raw data and transformed data.
-  <img src="Images/container.png"> 
+  <img src="Images/1_container.png"> 
 
 ## Data Ingestion using Azure Data Factory
 1. First, created an Azure Data Factory workspace within the previously established resource group (data-election-brazil).
@@ -55,11 +55,11 @@ The zip file returns as a subfolder within the CSVs:
 <img src="Images/5_key_vault_code_secure.png">
 
 7. Writing Data Transformations mount ADLS Gen2 to Databricks.
-8. Writing Transformed Data to ADLS Gen2.
- <img src="Images/transformed_data_tables.png">
-  <img src="Images/transformed_data_contents.png">
+   - Within the code using python with OS library, removed files that were not used. (code is provided in the reference below)
 Refer below notebook to transformations and code used to mount ADLS Gen2 to Databricks.
-
 [Election-Brazil-Transformation.ipynb](https://github.com/)
+
+8. Writing Transformed Data to ADLS Gen2.
+
 
 
