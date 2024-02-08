@@ -54,12 +54,18 @@ The zip file returns as a subfolder within the CSVs:
 
 <img src="Images/5_key_vault_code_secure.png">
 
+6. In Databricks, created a secret scope:
+  - To create it, substitute go to https://<databricks_instance.net>#secrets/createScope;
+  - Create a Scope using the DNS and Resource ID from the Key Vault properties.   
+
 7. Writing Data Transformations mount ADLS Gen2 to Databricks.
    - Within the code using python with OS library, removed files that were not used. (code is provided in the reference below)
-Refer below notebook to transformations and code used to mount ADLS Gen2 to Databricks.
-[Election-Brazil-Transformation.ipynb](https://github.com/)
+   - Create a dataframe and soem data transforming in a few columns.
+<img src="Images/6_databricks_print.png">
 
 8. Writing Transformed Data to ADLS Gen2.
 
+Refer below notebook to transformations and code used to mount ADLS Gen2 to Databricks.
+[Election-Brazil-Transformation.ipynb](https://github.com/)
 
 
