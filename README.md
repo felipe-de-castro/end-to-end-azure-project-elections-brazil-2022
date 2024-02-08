@@ -27,10 +27,10 @@ Source(TSE): [Federal and States Candidates in 2022 elections](https://dadosaber
 1. First, created an Azure Data Factory workspace within the previously established resource group (data-election-brazil).
 2. After setting up the workspace, launch the Azure Data Factory Studio. 
 3. Upload the Election-Candidates dataset from TSE portal.
-4.1. Within the studio, initialize a new data integration pipeline. 
-4.2. Configuring the Data Source with HTTP template as we are using http request to get the data from web site.
-4.4. Establishing the Linked Service for source.
-4.5. Configuring the File Format as 'Binary' and Compression 'Zipdeflate'. For setting up the Linked Service Sink just as 'Binary' and file path (raw-data folder).
+4. Within the studio, initialize a new data integration pipeline. 
+   - Configuring the Data Source with HTTP template as we are using http request to get the data from web site.
+   - Establishing the Linked Service for source.
+   - Configuring the File Format as 'Binary' and Compression 'Zipdeflate'. For setting up the Linked Service Sink just as 'Binary' and file path (raw-data folder).
 
 <img src="Images/2_pipeline.png">  
 5. After the pipeline completes its execution, navigate to your Azure Data Lake Storage Gen2. Dive into the "raw_data" folder and subfolder with the CSVs. 
@@ -43,12 +43,23 @@ The zip file returns as a subfolder within the CSVs:
 2. Configuring Compute in Databricks
 3. Create a new notebook within Databricks and rename it appropriately, reflecting its purpose or the dataset it pertains to.
 4. Establishing a Connection to Azure Data Lake Storage (ADLS) using App Registration.
-4.1. Using the credentials (Client ID, Tenant ID), write the appropriate code in the Databricks notebook to mount ADLS. 
-5. Writing Data Transformations mount ADLS Gen2 to Databricks.
-6. Writing Transformed Data to ADLS Gen2.
+   - Create a new registration;
+   - Copy the credentials (Client ID, Tenant ID), to later write the appropriate code in the Databricks notebook to mount ADLS.
+   - In Certificate & Secrets: create a secret for later on store in in the Key Vault, for security purposes.
+5. Go to Key Vault in the Azure account:
+   - First create a key vault with the same resource used before;
+   - In the IAM of the key vault, add roles: Secret Officer with the member as your User and Secrets User with the member as 'AzureDatabricks'.
+   - Now in the 'Secrets', generate a secret with the App Registration Key secret, name it and create.
+   - This Key Vault will secure your secret key so it exposed in the mount code.
+
+<img src="Images/5_key_vault_code_secure.png">
+
+7. Writing Data Transformations mount ADLS Gen2 to Databricks.
+8. Writing Transformed Data to ADLS Gen2.
  <img src="Images/transformed_data_tables.png">
   <img src="Images/transformed_data_contents.png">
 Refer below notebook to transformations and code used to mount ADLS Gen2 to Databricks.
 
+[Election-Brazil-Transformation.ipynb](https://github.com/)
 
 
