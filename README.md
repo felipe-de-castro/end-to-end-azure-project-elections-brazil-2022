@@ -46,9 +46,10 @@ The zip file returns as a subfolder within the CSVs:
    - Create a new registration;
    - Copy the credentials (Client ID, Tenant ID), to later write the appropriate code in the Databricks notebook to mount ADLS.
    - In Certificate & Secrets: create a secret for later on store in in the Key Vault, for security purposes.
-5. Go to Key Vault in the Azure account:
-   - First create a key vault with the same resource used before;
-   - In the IAM of the key vault, add roles: Secret Officer with the member as your User and Secrets User with the member as 'AzureDatabricks'.
+
+5. Using Key Vault in the Azure account for Secure key protecting:
+   - In Key Vault, create a key vault with the same resource used before;
+   - In the IAM add roles: Secret Officer with the member as your User and Secrets User with the member as 'AzureDatabricks'.
    - Now in the 'Secrets', generate a secret with the App Registration Key secret, name it and create.
    - This Key Vault will secure your secret key so it exposed in the mount code.
 
