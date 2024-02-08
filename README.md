@@ -61,7 +61,7 @@ The zip file returns as a subfolder within the CSVs:
 
 7. Writing Data Transformations mount ADLS Gen2 to Databricks.
    - Within the code using python with OS library, removed files that were not used. (code is provided in the reference below)
-   - Create a dataframe, did some data transforming in a few columns and created table within a database to query.
+   - Create a dataframe, transformed columns with the correct datatype and created table within a database to query.
 
 <p align="center">
   <img src="Images/7_databricks_catalog_database_table.png" width="50%" />
@@ -69,9 +69,15 @@ The zip file returns as a subfolder within the CSVs:
 <p align="center">
   <i>Database and Table in Databricks Catalog</i>
 </p>
-8. Writing Transformed Data to ADLS Gen2.
 
+8. Writing Transformed Data to ADLS Gen2
+   - Folder is create in the container with the partitioned files
+
+<img src="Images/8_transformed_data.png">
 Refer below notebook to transformations and code used to mount ADLS Gen2 to Databricks.
-[Election-Brazil-Transformation.ipynb](https://github.com/)
+
+[Election-Brazil-Transformation.ipynb](https://github.com/felipe-de-castro/end-to-end-azure-project-elections-brazil-2022/blob/main/Data_Election_Transformation.ipynb)
+
+## Setting Up and Using Azure Synapse Analytics
 
 
