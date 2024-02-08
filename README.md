@@ -2,6 +2,10 @@
 
 This project provides a data engineering journey on the Brazilian election of 2022 dataset. Starting with a zip file from Superior Electoral Court (Brazilian Electoral Justice) , the data is ingested into the Azure ecosystem via Azure Data Factory. It's initially stored in Azure Data Lake Storage Gen2, then transformed in Azure Databricks. The enriched data, once again housed in ADLS Gen2, undergoes advanced analytics in Azure Synapse. 
 
+## Architecture
+
+ <img src="Images/architecture.png"> 
+
 
 ## Dataset Used 
 This contains the details of over Federal and State candidates, with 28909 candidates.
@@ -13,6 +17,7 @@ Source(TSE): [Federal and States Candidates in 2022 elections](https://dadosaber
 1. **Azure Data Factory:** For data ingestion from GitHub.
 2. **Azure Data Lake Storage Gen2**: As the primary data storage solution.
 3. **Azure Databricks:** For data transformation tasks.
+4. **Azure Key Vault:** For security of secret key value.
 
 ## Workflow 
 
