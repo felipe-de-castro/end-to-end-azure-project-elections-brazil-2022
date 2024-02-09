@@ -14,7 +14,7 @@ This dataset contains the details of the candidates such as names, age, politica
 Source(TSE): [Federal and States Candidates in 2022 elections](https://dadosabertos.tse.jus.br/dataset/candidatos-2022/resource/435145fd-bc9d-446a-ac9d-273f585a0bb9)
 
 ## Azure Services Used
-1. **Azure Data Factory:** For data ingestion from GitHub.
+1. **Azure Data Factory:** For data ingestion from TSE website.
 2. **Azure Data Lake Storage Gen2**: As the primary data storage solution.
 3. **Azure Databricks:** For data transformation tasks.
 4. **Azure Key Vault:** For security of secret key value.
