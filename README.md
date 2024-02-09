@@ -83,6 +83,4 @@ Refer below notebook to transformations and code used to mount ADLS Gen2 to Data
 
 [Election-Brazil-Transformation.ipynb](https://github.com/felipe-de-castro/end-to-end-azure-project-elections-brazil-2022/blob/main/Data_Election_Transformation.ipynb)
 
-## Setting Up and Using Azure Synapse Analytics
-
 
