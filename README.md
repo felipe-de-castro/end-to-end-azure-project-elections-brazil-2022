@@ -4,7 +4,8 @@ This project provides a data engineering journey on the Brazilian election of 20
 
 ## Architecture
 
- <img src="Images/endtoendazureproject.gif"> 
+ <img src="Images/end_to_end_azureproject.gif"> 
+ 
 
 
 ## Dataset Used 
