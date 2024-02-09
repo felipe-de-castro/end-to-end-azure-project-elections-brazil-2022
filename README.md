@@ -4,7 +4,7 @@ This project provides a data engineering journey on the Brazilian election of 20
 
 ## Architecture
 
- <img src="Images/architecture.png"> 
+ <img src="Images/endtoendazure.gif"> 
 
 
 ## Dataset Used 
