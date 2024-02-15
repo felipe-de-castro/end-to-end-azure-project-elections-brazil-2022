@@ -87,7 +87,7 @@ Refer below notebook to transformations and code used to mount ADLS Gen2 to Data
 ## Setting Up and Using Azure Synapse Analytics
 
 1. Creating a Synapse Analytics Workspace.
-2. Within Workspace navigate to the "Data" section , choose "Lake Database" and create a Database "TokyoOlympicDB"
+2. Within Workspace navigate to the "Data" section , choose "Lake Database" and create a Database "DataElectionsbr2022"
 3. Creating Table from Data Lake from the Transformed Data folder within your ADLS Gen2 storage.
 
 <img src="Images/9_synapse.png">
